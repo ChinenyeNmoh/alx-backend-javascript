@@ -1,12 +1,12 @@
+/* eslint-disable radix */
 export default function iterateThroughObject(reportWithIterator) {
-  let employeeNames = '';
+  let names = '';
   for (const [index, item] of Object.entries(reportWithIterator)) {
-    employeeNames += `${item}`;
+    names += `${item}`;
 
     if (parseInt(index) !== reportWithIterator.length - 1) {
-      employeeNames += ' | ';
+      names += ' | ';
     }
   }
-
-  return employeeNames;
+  return names;
 }
