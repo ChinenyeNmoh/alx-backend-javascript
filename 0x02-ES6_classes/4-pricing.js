@@ -21,10 +21,7 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    const amt = this.amount;
-    const cur = this.currency._code;
-    const nm = this.currency._name;
-    return `${amt} ${nm} ${cur}`;
+    return `${this.amount} ${this.currency._name} (${this.currency._code})`;
   }
 
   static convertPrice(amount, conversionRate) {
