@@ -23,11 +23,11 @@ export default class Pricing {
   displayFullPrice() {
     const amt = this.amount;
     const cur = this.currency._code;
-    const name = this.currency._name;
-    return `${amt} ${name} ${cur}`;
+    const nm = this.currency._name;
+    return `${amt} ${nm} ${cur}`;
   }
 
   static convertPrice(amount, conversionRate) {
-    return amount * conversionRate;
+    return (amount * conversionRate);
   }
 }
