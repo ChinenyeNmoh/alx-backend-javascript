@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString) {
   const newarr = [...set];
   let str = '';
-  if(startString === ''){
+  if (Startstring === undefined || startString.length === 0) {
     return '';
   }
   newarr.forEach((word) => {
