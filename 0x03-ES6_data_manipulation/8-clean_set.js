@@ -1,9 +1,11 @@
 export default function cleanSet(set, startString) {
   const newarr = [...set];
   let str = '';
-
+  if(startString === ''){
+    return '';
+  }
   newarr.forEach((word) => {
-    if (word.startsWith(startString) && startString !== '') {
+    if (word.startsWith(startString)) {
       str += `${word.slice(3)}-`;
     }
   });
