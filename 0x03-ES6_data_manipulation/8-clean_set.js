@@ -6,7 +6,7 @@ export default function cleanSet(set, startString) {
   }
   newarr.forEach((word) => {
     if (word.startsWith(startString)) {
-      str += `${word.slice(startString.length)}-`; // Updated to use startString.length
+      str += `${word.slice(startString.length)}-`; 
     }
   });
 
