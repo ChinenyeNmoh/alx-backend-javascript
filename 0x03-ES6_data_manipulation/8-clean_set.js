@@ -1,11 +1,11 @@
 export default function cleanSet(set, startString) {
-  const newarr = [...set];
-  let str = '';
   if (startString === undefined || startString.length === 0) {
     return '';
   }
+  const newarr = [...set];
+  let str = '';
   newarr.forEach((word) => {
-    if (word.startsWith(startString)) {
+    if (typeof word === 'string' && word.startsWith(startString)) {
       str += `${word.slice(startString.length)}-`;
     }
   });
