@@ -1,34 +1,23 @@
-interface Student {
-	firstName: string
-	lastName: string 
-	age: number
-	location: string
+export const cpp: Subjects.Cpp = new Subjects.Cpp();
+export const java: Subjects.Java = new Subjects.Java();
+export const react: Subjects.React = new Subjects.React();
+export const cTeacher: Subjects.Teacher = {
+    firstName: 'Abdul',
+    lastName: 'Azindo',
+    experienceTeachingC: 10,
 }
 
-const S1: Student = {
-	firstName: "Chinenye",
-	lastName: "Nmoh",
-	age: 33,
-	location: 'Lagos',
-}
+console.log("C++");
+cpp.setTeacher = cTeacher;
+console.log(cpp.getRequirements());
+console.log(cpp.getAvailableTeacher());
 
-const S2: Student = {
-	firstName: "Ifeoma",
-	lastName: "Umeaku",
-	age: 23,
-	location: 'Abuja',
-}
+console.log("Java");
+java.setTeacher = cTeacher;
+console.log(java.getRequirements());
+console.log(java.getAvailableTeacher());
 
-const studentsList: Student[] = [S1,S2];
-
-// create table for each student in the array
-const table = document.getElementById('studentTable') as HTMLTableElement;
-
-studentsList.forEach((student) => {
-  const row = table.insertRow();
-  const firstNameCell = row.insertCell(0);
-  const locationCell = row.insertCell(1);
-
-  firstNameCell.innerHTML = student.firstName;
-  locationCell.innerHTML = student.location;
-});
+console.log("React");
+react.setTeacher = cTeacher;
+console.log(react.getRequirements());
+console.log(react.getAvailableTeacher());
